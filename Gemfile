@@ -22,6 +22,14 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Add Materialize
+gem 'jquery-rails'
+gem 'materialize-sass'
+gem 'material_icons'
+
+# ViewComponent allows you to write reusable and easy-to-test view components
+gem "view_component", require: "view_component/engine"
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
