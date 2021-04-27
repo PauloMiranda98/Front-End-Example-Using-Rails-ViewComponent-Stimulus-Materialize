@@ -1,0 +1,34 @@
+<div class="content" data-controller="gallery" data-gallery-index-value="1">
+  <h2 class="center-align">Galeria</h2>
+  <div class="row">
+    <% @products.each do |product| %>
+      <%= render ProductCard::Component.new(product: product) do %>
+        <button data-action="click->product-card--component#delete" class="btn-small waves-effect waves-light">Remover Produto</button>
+      <% end %>
+    <% end %>
+  </div>
+
+  <br>
+
+  <h2 class="center-align">Galeria Seletiva</h2>
+  <p class="center-align">Selecione o elemento para ficar invisível</p>
+  <ul class="center-align pagination">
+    <li class="waves-effect"><a href="#" data-action="gallery#prev"><i class="material-icons">chevron_left</i></a></li>
+    <li class="waves-effect" data-gallery-target="pageItem"><a href="#" data-action="gallery#setIndex" data-value="1">1</a></li>
+    <li class="waves-effect" data-gallery-target="pageItem"><a href="#" data-action="gallery#setIndex" data-value="2">2</a></li>
+    <li class="waves-effect" data-gallery-target="pageItem"><a href="#" data-action="gallery#setIndex" data-value="3">3</a></li>
+    <li class="waves-effect" data-gallery-target="pageItem"><a href="#" data-action="gallery#setIndex" data-value="4">4</a></li>
+    <li class="waves-effect" data-gallery-target="pageItem"><a href="#" data-action="gallery#setIndex" data-value="5">5</a></li>
+    <li class="waves-effect"><a href="#" data-action="gallery#next"><i class="material-icons">chevron_right</i></a></li>
+  </ul>
+
+  <div class="row">
+    <% @products.each_with_index do |product, index| %>
+      <div data-gallery-target="pageProduct">
+        <%= render ProductCard::Component.new(product: product) do %>
+          <button data-action="gallery#setIndex" data-value="<%= index + 1 %>" class="btn-small waves-effect waves-light">Selecionar</button>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

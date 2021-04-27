@@ -1,0 +1,15 @@
+<div data-controller="product-card--component" class="col s6 m4 l3">
+  <div class="card hoverable">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img width=200 height="100%" class="activator" src=<%= @product[:image_url]%> style="background-position: center">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4"><%= @product[:name] %><i class="material-icons right">more_vert</i></span>
+      <%= content %>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4"><%= @product[:name] %><i class="material-icons right">close</i></span>
+      <p><%= @product[:description] %></p>
+    </div>
+  </div>
+</div>
