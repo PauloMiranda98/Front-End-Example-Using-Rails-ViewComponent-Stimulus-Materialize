@@ -1,6 +1,8 @@
 # README
 Este repositório tem como objetivo mostrar um exemplo simples utilizando o Ruby on Rails com as Bibliotecas [Stimulus](https://stimulus.hotwire.dev/), [View Component](https://viewcomponent.org/) e [Materialize](https://materializecss.com/).
 
+Este exemplo foi feito utilizando o Rails 6.1 e ruby 2.7.
+
 ---
 
 ## Criando o Projeto
@@ -78,9 +80,3 @@ application.load(
 Toque `additional_paths: []` por `additional_paths: ["app/components"]` no arquivo `config/webpacker.yml`
 
 Pronto, agora as bibliotecas estão configuradas!
-
----
-
-## Criando o Exemplo
-
-TODO
